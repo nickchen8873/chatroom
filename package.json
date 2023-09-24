@@ -10,10 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@types/node": "^18",
     "@types/uuid": "^9.0.0",
     "@types/ws": "^8.5.4",
     "autoprefixer": "^10.4.13",
-    "@types/node": "^18",
     "nuxt": "^3.4.2",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
@@ -21,7 +21,11 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.7",
     "@heroicons/vue": "^2.0.13",
+    "fs": "^0.0.1-security",
     "jiti": "^1.16.1",
+    "path": "^0.12.7",
+    "socket.io": "^4.7.1",
+    "socket.io-client": "^4.7.1",
     "uuid": "^9.0.0",
     "ws": "^8.12.0"
   }
