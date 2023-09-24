@@ -22,15 +22,7 @@
     },
     mounted() {
       // 連線到Socket.io Server
-      this.socket = io('https://localhost:4000');
-      // this.socket = io(window.location.hostname,{secure: true});
-      // this.socket = io(window.location.hostname,{
-      //   withCredentials: true,
-      //   extraHeaders: {
-      //     "my-custom-header": "abcd"
-      //   }
-      // });
-      console.log('現在路徑=',window.location.hostname)
+      this.socket = io()
 
       // 進入聊天室時，會收到之前的全部訊息，並更新到 messages
       this.socket.on("allMessage", (obj) => {
@@ -51,9 +43,6 @@
           text: this.message,
           id: Date.now() // 消息的ID
         });
-        
-        // this.name='';
-        // this.message = '';
       }
     },
     beforeDestroy() {

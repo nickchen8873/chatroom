@@ -12,12 +12,7 @@ const serverOptions = { key: privateKey, cert: certificate };
 const httpServer = createServer(serverOptions);
 
 // 創建Socket.io Server
-const io = new Server(httpServer, {
-  // origin: "https://localhost",
-  //   methods: ["GET", "POST"],
-  //   allowedHeaders: ["my-custom-header"],
-  //   credentials: true
-});
+const io = new Server(httpServer);
 
 let messages = []
 
